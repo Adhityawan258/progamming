@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <link rel="stylesheet" href="index.css">
+        <div class="inputgroup">
+            <p class="inputtitle">Nama</p>
+            <input id="inputnama" type="text">
+        </div>
+        <div class="inputgroup">
+            <p class="inputtitle">Kelas</p>
+            <input id="inputkelas" type="text">
+        </div>
+        <div class="inputgroup">
+            <p class="inputtitle">absen</p>
+            <input id="inputabsen" type="text">
+        </div>
+
+        <button class="btnsumbit" onclick="changekonten()">rubah konten</button>
+        <p id="displaynama"></p>
+        <p id="displaykelas"></p>
+        <script>
+            let nama = ""
+            let kelas = ""
+            let Absen = ""
+            function changekonten(){
+                saveinput()
+                displayinput()
+            }
+
+            function saveinput(){
+                nama = document.getElementById("inputnama").value
+                kelas = document.getElementById("inputkelas").value
+                absen = document.getElementById("inputabsen").value
+            }
+
+            function displayinput(){
+                document.getElementById("displaynama").innerHTML = "Nama" + nama
+                document.getElementById("displaykelas").innerHTML = "Kelas" + kelas
+                document.getElementById("displayAbsen").innerHTML = "Absen" + Absen
+            }
+
+        </script>
+        
+    </body>
+    </html>
